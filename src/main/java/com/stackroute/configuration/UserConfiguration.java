@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages ="com.stackroute")
-public class HomeConfiguration implements WebMvcConfigurer {
+public class UserConfiguration implements WebMvcConfigurer {
     @Bean
     public ViewResolver ViewResolver(){
         InternalResourceViewResolver viewResolver= new InternalResourceViewResolver();

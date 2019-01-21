@@ -20,7 +20,7 @@ public class LoginDAOImpl implements LoginDAO {
     }
 
     @Override
-    public boolean addToDatabase(User user) {
+    public boolean databaseSave(User user) {
         try {
             sessionFactory.getCurrentSession().save(user);
             return true;

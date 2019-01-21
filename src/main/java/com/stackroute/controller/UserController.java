@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/")
-public class HomeController {
+public class UserController {
 
     @Autowired
     private LoginDAO loginDAO;
@@ -27,7 +27,7 @@ public class HomeController {
     public ModelAndView populate (@RequestParam("username") String name,@RequestParam("password") String password ){
        user.setUsername(name);
        user.setPassword(password);
-       boolean status=loginDAO.addToDatabase(user);
+       boolean status=loginDAO.databaseSave(user);
        if(status){
           // User user1=loginDAO.getUserName(name);
            ModelAndView mv= new ModelAndView();
