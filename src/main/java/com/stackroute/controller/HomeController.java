@@ -23,7 +23,7 @@ public class HomeController {
         return "index";
     }
 
-    @RequestMapping("populate")
+    @RequestMapping("loginaadmele")
     public ModelAndView populate (@RequestParam("username") String name,@RequestParam("password") String password ){
        user.setUsername(name);
        user.setPassword(password);
@@ -32,7 +32,7 @@ public class HomeController {
           // User user1=loginDAO.getUserName(name);
            ModelAndView mv= new ModelAndView();
            mv.addObject("obj",loginDAO.getUserName(name).getUsername());
-           mv.setViewName("show");
+           mv.setViewName("result");
         return mv;
        }else{
            ModelAndView mv= new ModelAndView();

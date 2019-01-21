@@ -3,7 +3,7 @@
 <%@ page isELIgnored="false" %>
 </head>
 <body>
-<form action="populate">
+<form action="loginaadmele">
 User name:<br>
 <input type="text" name="username"><br>
 Password:<br>
